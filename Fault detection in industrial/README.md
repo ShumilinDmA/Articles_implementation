@@ -1,7 +1,8 @@
-The archive contains a web application for detecting time series based on PÑA and DPSA algorithms,
+The archive contains a web application for detecting time series based on PÃ‘A and DPSA algorithms,
 T2 and Q statistics.
 
 File description:
+
 Report.pdf - Report file for this project;
 Fault_detection.ipynb - Draft for all files in directory;
 Draft_for_Fault_detection.pdf  - PDF format for the file Fault_detection.ipynb;
