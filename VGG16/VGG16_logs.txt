@@ -1,0 +1,219 @@
+Starting time to logging: 20201028-071430 
+Network architercure: VGG_16(
+  (conv_block): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU()
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU()
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU()
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU()
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU()
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU()
+    (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): ReLU()
+    (19): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU()
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU()
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): ReLU()
+    (26): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (27): ReLU()
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU()
+    (30): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (linear_block): Sequential(
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(in_features=25088, out_features=4096, bias=True)
+    (2): ReLU()
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=4096, out_features=4096, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=4096, out_features=42, bias=True)
+  )
+) 
+Oprimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.01
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0005
+) 
+Scheduler: <torch.optim.lr_scheduler.ReduceLROnPlateau object at 0x7fa5cce606a0> 
+Scheduler parameters: {'factor': 0.1, 'min_lrs': [0], 'patience': 3, 'verbose': True, 'cooldown': 0, 'cooldown_counter': 0, 'mode': 'min', 'threshold': 0.0001, 'threshold_mode': 'rel', 'best': 3.1293260780599765, 'num_bad_epochs': 0, 'mode_worse': inf, 'eps': 1e-08, 'last_epoch': 1, '_last_lr': [0.01]} 
+Loss function: CrossEntropyLoss() 
+SEED for learning: 2020 
+
+Learning process: 
+Epoch: 1, Train loss: 3.386805742844633, Val loss: 3.1293260780599765 
+Epoch: 1, Train accuracy 0.09365777604543683, Val accuracy: 0.16641192204814673 
+Epoch: 1, F1 Val score: 0.035215943504624925 
+
+Epoch: 2, Train loss: 3.0616845917984494, Val loss: 2.6733176732819457 
+Epoch: 2, Train accuracy 0.17990979453198952, Val accuracy: 0.27990064959877725 
+Epoch: 2, F1 Val score: 0.09669586388202646 
+
+Epoch: 3, Train loss: 2.6750879106638963, Val loss: 2.2714978459685824 
+Epoch: 3, Train accuracy 0.2715073222339774, Val accuracy: 0.38135269392434085 
+Epoch: 3, F1 Val score: 0.17703676243736538 
+
+Epoch: 4, Train loss: 2.2447709026020175, Val loss: 1.6676447034383213 
+Epoch: 4, Train accuracy 0.38883011303524695, Val accuracy: 0.5555980129919755 
+Epoch: 4, F1 Val score: 0.30188757892949586 
+
+Epoch: 5, Train loss: 1.8360099831842966, Val loss: 1.4310168745320035 
+Epoch: 5, Train accuracy 0.48744362158249344, Val accuracy: 0.5941918226977455 
+Epoch: 5, F1 Val score: 0.3421095806755363 
+
+Epoch: 6, Train loss: 1.513573487854142, Val loss: 1.3172466623723895 
+Epoch: 6, Train accuracy 0.5706331087477031, Val accuracy: 0.6400458540313336 
+Epoch: 6, F1 Val score: 0.41673708812866217 
+
+Epoch: 7, Train loss: 1.2794747320804758, Val loss: 0.9773325131146289 
+Epoch: 7, Train accuracy 0.6370621972270171, Val accuracy: 0.73079862437906 
+Epoch: 7, F1 Val score: 0.5263622691864894 
+
+Epoch: 8, Train loss: 1.074258414765324, Val loss: 0.8708063818181249 
+Epoch: 8, Train accuracy 0.6955843866584999, Val accuracy: 0.7611769201375621 
+Epoch: 8, F1 Val score: 0.5576206455379437 
+
+Epoch: 9, Train loss: 0.9249148476899776, Val loss: 0.7430473116913687 
+Epoch: 9, Train accuracy 0.7400746143994654, Val accuracy: 0.8030187237294613 
+Epoch: 9, F1 Val score: 0.6154798672237034 
+
+Epoch: 10, Train loss: 0.7960531563355003, Val loss: 0.6704931527000372 
+Epoch: 10, Train accuracy 0.7737624589342391, Val accuracy: 0.815437523882308 
+Epoch: 10, F1 Val score: 0.6282111693328299 
+
+Epoch: 11, Train loss: 0.6854161843703129, Val loss: 0.6461422602821498 
+Epoch: 11, Train accuracy 0.8090094103235147, Val accuracy: 0.826518914787925 
+Epoch: 11, F1 Val score: 0.6438439286499925 
+
+Epoch: 12, Train loss: 0.604634387232664, Val loss: 0.5623264776462356 
+Epoch: 12, Train accuracy 0.8300573528592906, Val accuracy: 0.8553687428353076 
+Epoch: 12, F1 Val score: 0.6792932728214901 
+
+Epoch: 13, Train loss: 0.5442606878112038, Val loss: 0.5175866497054918 
+Epoch: 13, Train accuracy 0.8477643521354196, Val accuracy: 0.8630110813909057 
+Epoch: 13, F1 Val score: 0.7258512573328292 
+
+Epoch: 14, Train loss: 0.47301620411424145, Val loss: 0.49540752063145566 
+Epoch: 14, Train accuracy 0.8657497633498524, Val accuracy: 0.8742835307604127 
+Epoch: 14, F1 Val score: 0.7181080288351303 
+
+Epoch: 15, Train loss: 0.4387724992294169, Val loss: 0.5263588451728777 
+Epoch: 15, Train accuracy 0.877164652820313, Val accuracy: 0.8601452044325564 
+Epoch: 15, F1 Val score: 0.7032157735811497 
+
+Epoch: 16, Train loss: 0.41620571240828375, Val loss: 0.47763042412143103 
+Epoch: 16, Train accuracy 0.8799487722033521, Val accuracy: 0.8754298815437523 
+Epoch: 16, F1 Val score: 0.7338161367297372 
+
+Epoch: 17, Train loss: 0.35281578475664704, Val loss: 0.4511977720907457 
+Epoch: 17, Train accuracy 0.9016092210033966, Val accuracy: 0.8815437523882308 
+Epoch: 17, F1 Val score: 0.7607313313573305 
+
+Epoch: 18, Train loss: 0.3437455263990915, Val loss: 0.37722099736122217 
+Epoch: 18, Train accuracy 0.9019989977170221, Val accuracy: 0.9031333588077952 
+Epoch: 18, F1 Val score: 0.7581869347183473 
+
+Epoch: 19, Train loss: 0.297098434668712, Val loss: 0.40542476273216177 
+Epoch: 19, Train accuracy 0.9160309594075394, Val accuracy: 0.8977837218188766 
+Epoch: 19, F1 Val score: 0.7575142287613296 
+
+Epoch: 20, Train loss: 0.28864217045126744, Val loss: 0.35384078327826884 
+Epoch: 20, Train accuracy 0.9168661952224512, Val accuracy: 0.9128773404661826 
+Epoch: 20, F1 Val score: 0.7746536965779983 
+
+Epoch: 21, Train loss: 0.26333717324532074, Val loss: 0.45807417264912115 
+Epoch: 21, Train accuracy 0.9242162703936745, Val accuracy: 0.8878486816965991 
+Epoch: 21, F1 Val score: 0.7424508728597969 
+
+Epoch: 22, Train loss: 0.257027987112174, Val loss: 0.41646090619063897 
+Epoch: 22, Train accuracy 0.9257753772481764, Val accuracy: 0.8952999617883072 
+Epoch: 22, F1 Val score: 0.747705575810681 
+
+Epoch: 23, Train loss: 0.23036362463766552, Val loss: 0.4058447510038207 
+Epoch: 23, Train accuracy 0.9329027228687566, Val accuracy: 0.903706534199465 
+Epoch: 23, F1 Val score: 0.7809378270892984 
+
+Epoch: 24, Train loss: 0.22089008838759744, Val loss: 0.3324462981865431 
+Epoch: 24, Train accuracy 0.935352747925831, Val accuracy: 0.9203286205578907 
+Epoch: 24, F1 Val score: 0.8159522057075528 
+
+Epoch: 25, Train loss: 0.20043260842421498, Val loss: 0.34325523717192963 
+Epoch: 25, Train accuracy 0.9411993986302133, Val accuracy: 0.9203286205578907 
+Epoch: 25, F1 Val score: 0.7983811492855976 
+
+Epoch: 26, Train loss: 0.19750479759246126, Val loss: 0.37673233404476586 
+Epoch: 26, Train accuracy 0.9418675872821427, Val accuracy: 0.9195643867023309 
+Epoch: 26, F1 Val score: 0.8125819306781229 
+
+Epoch: 27, Train loss: 0.196647868467284, Val loss: 0.3534972697587518 
+Epoch: 27, Train accuracy 0.9420903168327858, Val accuracy: 0.9214749713412305 
+Epoch: 27, F1 Val score: 0.812988941695232 
+
+Epoch: 28, Train loss: 0.1894438510405021, Val loss: 0.3839135628234898 
+Epoch: 28, Train accuracy 0.9445403418898602, Val accuracy: 0.9126862820022927 
+Epoch: 28, F1 Val score: 0.8008423450049246 
+
+Epoch: 29, Train loss: 0.08381163722137625, Val loss: 0.2895195003959073 
+Epoch: 29, Train accuracy 0.976390667631828, Val accuracy: 0.9428735192969049 
+Epoch: 29, F1 Val score: 0.8365709026997243 
+
+Epoch: 30, Train loss: 0.06925639387188406, Val loss: 0.2863884148510713 
+Epoch: 30, Train accuracy 0.980511164318726, Val accuracy: 0.9430645777607948 
+Epoch: 30, F1 Val score: 0.8403842804815683 
+
+Epoch: 31, Train loss: 0.06220986393757787, Val loss: 0.28448015170433066 
+Epoch: 31, Train accuracy 0.9832396013141044, Val accuracy: 0.9447841039358044 
+Epoch: 31, F1 Val score: 0.8432558128807799 
+
+Epoch: 32, Train loss: 0.054834574959237485, Val loss: 0.29293445186290207 
+Epoch: 32, Train accuracy 0.9846873433932847, Val accuracy: 0.9442109285441345 
+Epoch: 32, F1 Val score: 0.8346746103166955 
+
+Epoch: 33, Train loss: 0.052758751922150196, Val loss: 0.29087301996494913 
+Epoch: 33, Train accuracy 0.9839077899660338, Val accuracy: 0.946312571646924 
+Epoch: 33, F1 Val score: 0.8430897030699838 
+
+Epoch: 34, Train loss: 0.051020154962121686, Val loss: 0.29245473048445103 
+Epoch: 34, Train accuracy 0.9850771201069102, Val accuracy: 0.9449751623996943 
+Epoch: 34, F1 Val score: 0.8390770294550018 
+
+Epoch: 35, Train loss: 0.038590197549982275, Val loss: 0.30972540921207414 
+Epoch: 35, Train accuracy 0.9882510162035748, Val accuracy: 0.9466946885747038 
+Epoch: 35, F1 Val score: 0.8451473835029685 
+
+Epoch: 36, Train loss: 0.04146927117606419, Val loss: 0.3060311722545324 
+Epoch: 36, Train accuracy 0.9880839690405925, Val accuracy: 0.9449751623996943 
+Epoch: 36, F1 Val score: 0.8388408877004727 
+
+Epoch: 37, Train loss: 0.04089594751920461, Val loss: 0.30430808732123105 
+Epoch: 37, Train accuracy 0.9883066985912355, Val accuracy: 0.9453572793274742 
+Epoch: 37, F1 Val score: 0.8432977808245904 
+
+Epoch: 38, Train loss: 0.04149361984594039, Val loss: 0.304487944449297 
+Epoch: 38, Train accuracy 0.9877498747146277, Val accuracy: 0.9453572793274742 
+Epoch: 38, F1 Val score: 0.8414795126855933 
+
+Epoch: 39, Train loss: 0.039930781366238115, Val loss: 0.30424546780770045 
+Epoch: 39, Train accuracy 0.9884180633665571, Val accuracy: 0.9447841039358044 
+Epoch: 39, F1 Val score: 0.8401127171080697 
+
+Epoch: 40, Train loss: 0.04142086520146767, Val loss: 0.3040193968264256 
+Epoch: 40, Train accuracy 0.9878612394899493, Val accuracy: 0.9447841039358044 
+Epoch: 40, F1 Val score: 0.8401127171080697 
+
