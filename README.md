@@ -1,4 +1,4 @@
-Implementation articles in wide field of DS/ML/DL for learning purpose. \ 
+Implementation articles in wide field of DS/ML/DL for learning purpose.
 
 Implemented:
 
