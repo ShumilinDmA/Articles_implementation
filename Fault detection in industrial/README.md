@@ -1,4 +1,4 @@
-The archive contains a web application for detecting time series based on PCA and DPCA algorithms,
+The archive contains a web application for detecting faults in time series data based on PCA and DPCA algorithms,
 T2 and Q statistics.
 
 File description:
